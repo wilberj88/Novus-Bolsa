@@ -1,6 +1,9 @@
 # Novus-Bolsa
 IA para Trading de Acciones, bonos, derivados, cripto, inmobiliarias e inversiones alternativas en portafolio
 
+Build a ChatGPT Trading Bot With Real Time News using JavaScript
+https://morioh.com/p/7bfa4ed83037?f=60c59d87cb33627fbcc0a0f3&fbclid=IwAR0uewyMIf4FRgmvkVjS7rsDpc0cEypapacNJpUVei_twHfbQlMpXKnQMSU
+
 
 Referentes:
 Stock Sentiment Scores: https://medium.com/@CalebMBowyer/stock-sentiment-scores-for-2-28-2023-6ffaf219cfba

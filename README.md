@@ -13,3 +13,7 @@ Risk Management of Stocks: https://amitvkulkarni.medium.com/risk-management-of-s
 
 Bibliografía:
 1) Python Financiero (Bogotá, 2021)
+
+Libraries:
+1) Yahoo Finance
+2) Nsepy

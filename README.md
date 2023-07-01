@@ -12,6 +12,8 @@ Referentes:
 4) Risk Management of Stocks: https://amitvkulkarni.medium.com/risk-management-of-stocks-using-python-37f75afbc2dc
 5) Price-tracking alert system: Web Scrapping Nasdaq: Sentiment analysis, stock market price prediction, market & companies analysis: https://trading-data-analysis.pro/web-scraping-nasdaq-718dab33853e
 6) Dividend investing dashboard: https://levelup.gitconnected.com/how-to-build-a-dividend-investing-dashboard-in-python-and-streamlit-a9ad2714c76b
+7) Predicting Stocks: https://medium.com/@borandabak/predicting-stock-prices-with-lstm-a-fastapi-and-streamlit-web-application-1ad0559639b7
+   
 
 
 

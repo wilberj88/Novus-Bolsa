@@ -23,6 +23,7 @@ Bibliografía:
 1) Python Financiero (Bogotá, 2021)
 
 Libraries:
+0) Top 10 Financials APIs: https://levelup.gitconnected.com/top-10-financial-apis-in-2023-54505fcd910a
 1) Yahoo Finance
 2) Nsepy
 3) Selenium + Beutifulsoup4: web scrapear fuentes de datos como Nasdaq y portales especializados

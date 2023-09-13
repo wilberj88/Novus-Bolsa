@@ -28,3 +28,9 @@ Libraries:
 2) Nsepy
 3) Selenium + Beutifulsoup4: web scrapear fuentes de datos como Nasdaq y portales especializados
 4) Framework Scrapingdog: Web scraping API for Developers
+
+Buscar:
+Ranking Pagadores de Dividendos
+Ranking Mayores Caídas o Subidas
+Ranking Proyeccion 10 años Materias Primas y Commodities
+Ranking Proyección Trends 10 años

@@ -4,6 +4,10 @@ IA para Trading de Acciones, bonos, derivados, cripto, inmobiliarias e inversion
 Build a ChatGPT Trading Bot With Real Time News using JavaScript
 https://morioh.com/p/7bfa4ed83037?f=60c59d87cb33627fbcc0a0f3&fbclid=IwAR0uewyMIf4FRgmvkVjS7rsDpc0cEypapacNJpUVei_twHfbQlMpXKnQMSU
 
+LLM for Finance:
+https://levelup.gitconnected.com/fingpt-open-source-llm-for-finance-e8ec10d0bf40
+
+
 BrokerBots:
 https://smartlever.medium.com/connecting-the-dots-interactive-brokers-and-smartbots-a3ce38a33744
 

@@ -7,6 +7,9 @@ https://medium.datadriveninvestor.com/develop-a-simple-financial-dashboard-with-
 Build a ChatGPT Trading Bot With Real Time News using JavaScript
 https://morioh.com/p/7bfa4ed83037?f=60c59d87cb33627fbcc0a0f3&fbclid=IwAR0uewyMIf4FRgmvkVjS7rsDpc0cEypapacNJpUVei_twHfbQlMpXKnQMSU
 
+Real Time Sentiment Analysis:
+https://levelup.gitconnected.com/real-time-stock-news-sentiment-prediction-with-python-b4c6b9b78e5e
+
 LLM for Finance:
 https://levelup.gitconnected.com/fingpt-open-source-llm-for-finance-e8ec10d0bf40
 

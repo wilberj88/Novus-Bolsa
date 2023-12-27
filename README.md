@@ -7,6 +7,9 @@ https://medium.datadriveninvestor.com/develop-a-simple-financial-dashboard-with-
 Cripto Real Time Dashboard:
 https://levelup.gitconnected.com/creating-a-crypto-dashboard-with-custom-css-in-streamlit-53c5b85ec237
 
+RealTime Datasets:
+https://medium.datadriveninvestor.com/real-time-options-analysis-with-python-05da6551637c
+
 Stock Options DashBoard:
 https://medium.com/@sugath.mudali/creating-a-simple-stock-portfolio-dashboard-in-python-702187bbe0d6
 

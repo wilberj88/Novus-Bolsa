@@ -13,6 +13,7 @@ https://medium.datadriveninvestor.com/real-time-options-analysis-with-python-05d
 Stock Options Real Time Strategy DashBoard:
 https://medium.com/@sugath.mudali/creating-a-simple-stock-portfolio-dashboard-in-python-702187bbe0d6
 https://medium.com/@sugath.mudali/a-simple-stock-picking-strategy-with-6-key-financial-metrics-part-1-dab0effb80f8
+https://medium.com/@sugath.mudali/creating-a-stock-dashboard-with-streamlit-441039bdf7e0
 
 Build a ChatGPT Trading Bot With Real Time News using JavaScript
 https://morioh.com/p/7bfa4ed83037?f=60c59d87cb33627fbcc0a0f3&fbclid=IwAR0uewyMIf4FRgmvkVjS7rsDpc0cEypapacNJpUVei_twHfbQlMpXKnQMSU

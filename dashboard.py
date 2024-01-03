@@ -36,7 +36,8 @@ with title_col:
     st.markdown('<p class="dashboard_title">Crypto<br>Dashboard</p>', unsafe_allow_html = True)
 
 with btc_col:
-    st.markdown(f'<p class="btc_text">BTC / USDT<br></p><p class="price_details">34060.92</p>', unsafe_allow_html = True)
+    with st.container(border=True):
+        st.markdown(f'<p class="btc_text">BTC / USDT<br></p><p class="price_details">34060.92</p>', unsafe_allow_html = True)
        
 with eth_col:
     with st.container():

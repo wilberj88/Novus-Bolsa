@@ -164,6 +164,12 @@ with params_col:
                                   
 
 
+placeholder = st.empty()
+st.caption("By Fanilo")
+
+if "iteration" not in st.session_state:
+    st.session_state["iteration"] = 0
+
 data = [random.randint(0, 100) for _ in range(7)]
 option = {
     "xAxis": {

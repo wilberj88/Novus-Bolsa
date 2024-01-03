@@ -5,6 +5,7 @@ import pandas as pd
 from lightweight_charts.widgets import StreamlitChart
 import random
 import pandas as pd
+import time
 
 if "symbols_list" not in st.session_state:
     st.session_state.symbols_list = None

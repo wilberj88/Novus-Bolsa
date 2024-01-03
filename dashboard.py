@@ -38,27 +38,27 @@ with title_col:
 with btc_col:
     with st.container():
         #btc_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=BTC/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="btc_text">BTC / USDT<br></p><p class="price_details">5</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="btc_text">BTC / USDT<br></p><p class="price_details">34060.92</p>', unsafe_allow_html = True)
 
 with eth_col:
     with st.container():
         #eth_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=ETH/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="eth_text">ETH / USDT<br></p><p class="price_details">10</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="eth_text">ETH / USDT<br></p><p class="price_details">1789.26</p>', unsafe_allow_html = True)
 
 with xmr_col:
     with st.container():
         #xmr_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XMR/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="xmr_text">XMR / USDT<br></p><p class="price_details">15</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="xmr_text">XMR / USDT<br></p><p class="price_details">162.1</p>', unsafe_allow_html = True)
 
 with sol_col:
     with st.container():
         #sol_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=SOL/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="sol_text">SOL / USDT<br></p><p class="price_details">20</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="sol_text">SOL / USDT<br></p><p class="price_details">32.27</p>', unsafe_allow_html = True)
 
 with xrp_col:
     with st.container():
         #xrp_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XRP/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="xrp_text">XRP / USDT<br></p><p class="price_details">30</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="xrp_text">XRP / USDT<br></p><p class="price_details">0.5449</p>', unsafe_allow_html = True)
 
 
 params_col, chart_col, data_col = st.columns([0.5,1.2,0.6])

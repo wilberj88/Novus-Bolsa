@@ -1,5 +1,6 @@
 import streamlit as st
 import requests
+from streamlit_echarts import st_echarts
 import pandas as pd
 from lightweight_charts.widgets import StreamlitChart
 
@@ -94,28 +95,44 @@ with params_col:
         st.markdown('')
         
         if update_chart:
-            url = f'https://api.taapi.io/candles?secret={api_key}&exchange={exchange}&symbol={symbol}&interval={interval}&period={period}&results=max'
-            hist_json = requests.get(url).json()
-            hist_df = pd.DataFrame(hist_json).drop('timestampHuman', axis = 1).rename(columns = {'timestamp':'time'})
-            hist_df.time = pd.to_datetime(hist_df.time, unit = 's')
+           
 
             with chart_col:
 
-                with st.container():        
-                    chart = StreamlitChart(height = 450, width = 650)
-                    chart.grid(vert_enabled = True, horz_enabled = True)
-
-                    chart.layout(background_color='#131722', font_family='Trebuchet MS', font_size = 16)
-
-                    chart.candle_style(up_color='#2962ff', down_color='#e91e63',
-                                       border_up_color='#2962ffcb', border_down_color='#e91e63cb',
-                                       wick_up_color='#2962ffcb', wick_down_color='#e91e63cb')
-
-                    chart.volume_config(up_color='#2962ffcb', down_color='#e91e63cb')
-                    chart.legend(visible = True, font_family = 'Trebuchet MS', ohlc = True, percent = True)
-
-                    chart.set(hist_df)
-                    chart.load()
+                with st.container(border=True):        
+                    def render_basic_radar():
+                        option = {
+                                "title": {"text": "Costos estimados por tipos de Riesgos Climáticos"},
+                                "legend": {"data": ["Riesgo Detectado", "Riesgo Gestionado"]},
+                                "radar": {
+                                    "indicator": [
+                                        {"name": "Derrumbes", "max": 6500},
+                                        {"name": "Sequías", "max": 16000},
+                                        {"name": "Incendios", "max": 30000},
+                                        {"name": "Inundaciones", "max": 38000},
+                                        {"name": "Deslizamientos", "max": 52000},
+                                        {"name": "Contaminación", "max": 25000},
+                                    ]
+                                },
+                                "series": [
+                                    {
+                                        "name": "Costo Estimado Vs Costo Mitigado",
+                                        "type": "radar",
+                                        "data": [
+                                            {
+                                                "value": [2000, 10000, 20000, 3500, 15000, 11800],
+                                                "name": "Riesgo Detectado",
+                                            },
+                                            {
+                                                "value": [3500, 15000, 25000, 10800, 22000, 20000],
+                                                "name": "Riesgo Gestionado",
+                                            },
+                                        ],
+                                    }
+                                ],
+                            }
+                        st_echarts(option, height="500px")
+                    render_basic_radar()
                     
             with data_col:
                     st.dataframe(hist_df, height = 470)

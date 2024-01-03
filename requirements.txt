@@ -1,2 +1,4 @@
 streamlit
-lightweight_charts.widgets
+lightweight_charts
+requests
+pandas

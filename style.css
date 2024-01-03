@@ -99,3 +99,10 @@ html, body, [class*="css"] {
     line-height: 0.2;
     padding-top: 10px;
 }
+
+/* FORM CSS */
+[data-testid="stForm"] {
+    position: relative;
+    box-shadow: -6px 8px 20px 1px #00000052;
+    border-radius: 10px;
+}

@@ -46,7 +46,7 @@ html, body, [class*="css"] {
     font-weight: 700;
     line-height: 1.2;
     text-align: left;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
 }
 
 .price_details {

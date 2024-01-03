@@ -23,7 +23,7 @@ st.markdown(
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
 
-api_key = 'YOUR TAAPI.IO API KEY'
+api_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVlIjoiNjU4MGJkMDkxNDBjZmQ3MjNkMTQyNDFhIiwiaWF0IjoxNzA0MjQ3MzU0LCJleHAiOjMzMjA4NzExMzU0fQ.M2HQZCbxV3-lGmg8Hh6lKFfWVs53DMP88hbSLqKM17o'
         
 title_col, emp_col, btc_col, eth_col, xmr_col, sol_col, xrp_col = st.columns([1,0.2,1,1,1,1,1])
 

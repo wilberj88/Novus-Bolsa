@@ -63,7 +63,7 @@ with xrp_col:
         st.markdown(f'<p class="xrp_text">XRP / USDT<br></p><p class="price_details">0.5449</p>', unsafe_allow_html = True)
 
 
-params_col, chart_col, data_col = st.columns([0.6,1.5,1.1])
+params_col, chart_col, data_col = st.columns([0.7,1.6,1.1])
 
 with params_col:
     

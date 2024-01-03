@@ -2,3 +2,4 @@ streamlit
 lightweight_charts
 requests
 pandas
+streamlit_echarts

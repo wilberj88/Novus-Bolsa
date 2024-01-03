@@ -41,9 +41,9 @@ html, body, [class*="css"] {
 }
 
 .params_text{
-    font-size: 30px; 
+    font-size: 20px; 
     font-family: 'Space Grotesk';
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.2;
     text-align: left;
     padding-bottom: 10px;

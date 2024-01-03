@@ -37,8 +37,8 @@ with title_col:
 
 with btc_col:
     with st.container():
-        #btc_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=BTC/USDT&interval=1m').json()['value']
         st.markdown(f'<p class="btc_text">BTC / USDT<br></p><p class="price_details">34060.92</p>', unsafe_allow_html = True)
+        #btc_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=BTC/USDT&interval=1m').json()['value']
 
 with eth_col:
     with st.container():

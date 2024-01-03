@@ -40,22 +40,22 @@ with btc_col:
         st.markdown(f'<p class="btc_text">BTC / USDT<br></p><p class="price_details">34060.92</p>', unsafe_allow_html = True)
        
 with eth_col:
-    with st.container():
+    with st.container(border=True):
         #eth_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=ETH/USDT&interval=1m').json()['value']
         st.markdown(f'<p class="eth_text">ETH / USDT<br></p><p class="price_details">1789.26</p>', unsafe_allow_html = True)
 
 with xmr_col:
-    with st.container():
+    with st.container(border=True):
         #xmr_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XMR/USDT&interval=1m').json()['value']
         st.markdown(f'<p class="xmr_text">XMR / USDT<br></p><p class="price_details">162.1</p>', unsafe_allow_html = True)
 
 with sol_col:
-    with st.container():
+    with st.container(border=True):
         #sol_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=SOL/USDT&interval=1m').json()['value']
         st.markdown(f'<p class="sol_text">SOL / USDT<br></p><p class="price_details">32.27</p>', unsafe_allow_html = True)
 
 with xrp_col:
-    with st.container():
+    with st.container(border=True):
         #xrp_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XRP/USDT&interval=1m').json()['value']
         st.markdown(f'<p class="xrp_text">XRP / USDT<br></p><p class="price_details">0.5449</p>', unsafe_allow_html = True)
 

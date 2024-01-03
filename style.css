@@ -40,6 +40,15 @@ html, body, [class*="css"] {
     padding-bottom: 35px;
 }
 
+.params_text{
+    font-size: 30px; 
+    font-family: 'Space Grotesk';
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
 .price_details {
     font-size: 30px; 
     font-family: 'Space Grotesk';

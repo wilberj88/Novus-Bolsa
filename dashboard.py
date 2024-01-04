@@ -66,21 +66,12 @@ with params_col:
     with st.form(key = 'params_form'):
         
         st.markdown(f'<p class="params_text">PARÁMETROS', unsafe_allow_html = True)
-        
-        st.divider()
-        
-        exchanges = ['binance', 'bitstamp', 'binancefutures', 'whitebit', 'bybit', 'gatetio', 'coinbase', 'binanceus', 'kraken']
-        exchange = st.selectbox('Exchange', exchanges, key = 'exchange_selectbox')
-        
-        if st.session_state.symbols_list == None:
-            symbols = []
-            for i in exchanges:
-                symbols_list = requests.get(f'https://api.taapi.io/exchange-symbols?secret={api_key}&exchange={i}').json()
-                symbols.extend(symbols_list)
-            symbol = st.selectbox('Symbol', symbols, key = 'symbol_selectbox')
-            st.session_state.symbols_list = symbols
-        else:
-            symbol = st.selectbox('Symbol', st.session_state.symbols_list, key = 'symbol_selectbox')
+                
+        listado_modos = ['Conservador', 'Precavido', 'Arriesgado']
+        modo = st.selectbox('Selecciona un modo financiero', listado_modos, key = 'modo')
+
+        listado_edad_retiro = ['50 años','55 años','60 años','65 años','70 años']
+        retiro = st.selectbox('¿A qué edad deseas pensionarte?', listado_edad_retiro, key = 'retiro')
         
         interval_col, period_col = st.columns(2)
         with interval_col:

@@ -18,26 +18,10 @@ else:
     sec = converter(str(val))
     bar = st.progress(0)
     per = sec/100
+    progress_status = st.empty()
     for i in range(100):
         bar.progress((i+1))
-        st.write(str(i)+" %")
+        progress_status.write(str(i+1)+" %")
         ts.sleep(per)  
 
-def run_progress_bar(seconds, minutes, hours, days):
-    total_seconds = seconds + minutes * 60 + hours * 3600 + days * 86400
 
-    progress_bar = st.progress(0)
-
-    for i in range(total_seconds + 1):
-        time.sleep(1)
-        progress_bar.progress(int(i * 100 / total_seconds))
-
-    st.success("¡Proceso completado!")
-
-st.title("Barra de Progreso con Streamlit")
-
-current_time = ts.localtime()
-seconds_left = 59 - current_time.tm_sec
-minutes_left = 59 - current_time.tm_min
-hours_left = 23 - current_time.tm_hour
-days_left = 0

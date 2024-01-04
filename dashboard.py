@@ -162,39 +162,40 @@ with params_col:
                     },
                     hide_index=True,
                 )
+                placeholder = st.empty()
+                st.caption("By Wilber Jimenez Hernandez")
+                
+                if "iteration" not in st.session_state:
+                    st.session_state["iteration"] = 0
+                
+                data = [random.randint(0, 100) for _ in range(7)]
+                option = {
+                    "xAxis": {
+                        "type": "category",
+                        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
+                    },
+                    "yAxis": {"type": "value"},
+                    "series": [
+                        {
+                            "data": data,
+                            "type": "bar",
+                            "showBackground": True,
+                            "backgroundStyle": {"color": "rgba(180, 180, 180, 0.2)"},
+                        }
+                    ],
+                }
+                
+                while st.session_state["iteration"] < 10:
+                    st.markdown(f"Iteration number {st.session_state['iteration']}")
+                
+                    with placeholder:
+                        st_echarts(option, height="500px", key="chart")
+                    time.sleep(1)
+                    st.session_state["iteration"] += 1
+                
+                    if st.session_state["iteration"] < 10:
+                        st.experimental_rerun()
+
                                   
 
 
-placeholder = st.empty()
-st.caption("By Fanilo")
-
-if "iteration" not in st.session_state:
-    st.session_state["iteration"] = 0
-
-data = [random.randint(0, 100) for _ in range(7)]
-option = {
-    "xAxis": {
-        "type": "category",
-        "data": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"],
-    },
-    "yAxis": {"type": "value"},
-    "series": [
-        {
-            "data": data,
-            "type": "bar",
-            "showBackground": True,
-            "backgroundStyle": {"color": "rgba(180, 180, 180, 0.2)"},
-        }
-    ],
-}
-
-while st.session_state["iteration"] < 10:
-    st.markdown(f"Iteration number {st.session_state['iteration']}")
-
-    with placeholder:
-        st_echarts(option, height="500px", key="chart")
-    time.sleep(1)
-    st.session_state["iteration"] += 1
-
-    if st.session_state["iteration"] < 10:
-        st.experimental_rerun()

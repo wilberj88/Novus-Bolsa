@@ -75,6 +75,7 @@ with params_col:
         
         estilo_de_vida_retiro = st.selectbox('Estilo de vida', ['Popular', 'Clase Media', 'Clase Media Alta', 'Clase Alta'], key = 'interval_selectbox')
         ahorro = st.number_input('Meta Ahorros USD millones', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
+        a = st.slider("Indica cuánto en promedio ganas al mes en dólares", 0, 10000, 500)
         st.divider()
         update_chart = st.form_submit_button('Update chart')
         
@@ -84,39 +85,23 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):
-                    def render_basic_radar():
-                        option = {
-                                "title": {"text": "Costos estimados por tipos de Riesgos Climáticos"},
-                                "legend": {"data": ["Riesgo Detectado", "Riesgo Gestionado"]},
-                                "radar": {
-                                    "indicator": [
-                                        {"name": "Derrumbes", "max": 6500},
-                                        {"name": "Sequías", "max": 16000},
-                                        {"name": "Incendios", "max": 30000},
-                                        {"name": "Inundaciones", "max": 38000},
-                                        {"name": "Deslizamientos", "max": 52000},
-                                        {"name": "Contaminación", "max": 25000},
-                                    ]
-                                },
-                                "series": [
-                                    {
-                                        "name": "Costo Estimado Vs Costo Mitigado",
-                                        "type": "radar",
-                                        "data": [
-                                            {
-                                                "value": [2000, 10000, 20000, 3500, 15000, 11800],
-                                                "name": "Riesgo Detectado",
-                                            },
-                                            {
-                                                "value": [3500, 15000, 25000, 10800, 22000, 20000],
-                                                "name": "Riesgo Gestionado",
-                                            },
-                                        ],
-                                    }
-                                ],
-                            }
-                        st_echarts(option, height="500px")
-                    render_basic_radar()
+                    fig1 = go.Figure(data=[go.Sankey(
+                        node = dict(
+                            pad = 15,
+                            thickness = 20,
+                            line = dict(color = "black", width = 0.5),
+                            label = ["Gastos Mensuales", "Necesidades", "Entretenimiento", "Inversiones", "Vivienda", "Estudio", "Alimentación", "Transporte", "Entretenimiento", "Viajes", "Acciones", "Activos", "Criptomonedas", "Bonos"],
+                            color = "red"
+                            ),
+                        link = dict(
+                        source = [0, 0, 0, 1, 1, 1, 1, 2, 2, 3, 3, 3, 3], # indices correspond to labels, eg A1, A2, A1, B1, ...
+                        target = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+                        value = [50, 20, 30, 10, 20, 10, 22, 22, 10, 14, 10, 10, 10]
+                        ))])
+                    
+                    fig1.update_layout(title_text="Usos promedio de tu presupuesto💰", font_size=10)
+                    st.plotly_chart(fig1, theme="streamlit")
+                   
                     
             with data_col:
                 df = pd.DataFrame(

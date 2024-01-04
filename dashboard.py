@@ -7,6 +7,8 @@ import random
 import pandas as pd
 import time
 from datetime import time
+import plotly.graph_objects as go
+
 
 if "symbols_list" not in st.session_state:
     st.session_state.symbols_list = None

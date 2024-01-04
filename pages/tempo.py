@@ -28,13 +28,13 @@ else:
 st.title('1 hour Timer')
 hora = "01:00:00"
 sec = converter(str(hora))
-    bar = st.progress(0)
-    per = sec/100
-    progress_status = st.empty()
-    for i in range(100):
-        bar.progress((i+1))
-        progress_status.write(str(i+1)+" %")
-        ts.sleep(per)  
+bar = st.progress(0)
+per = sec/100
+progress_status = st.empty()
+for i in range(100):
+    bar.progress((i+1))
+    progress_status.write(str(i+1)+" %")
+    ts.sleep(per)  
 
 
 st.title('1 minute Timer')

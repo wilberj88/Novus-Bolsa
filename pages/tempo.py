@@ -19,9 +19,21 @@ else:
         bar.progress((i+1)*10)
         time.sleep(1)  
 
+def run_progress_bar(seconds, minutes, hours, days):
+    total_seconds = seconds + minutes * 60 + hours * 3600 + days * 86400
+
+    progress_bar = st.progress(0)
+
+    for i in range(total_seconds + 1):
+        time.sleep(1)
+        progress_bar.progress(int(i * 100 / total_seconds))
+
+    st.success("¡Proceso completado!")
+
+st.title("Barra de Progreso con Streamlit")
+
 current_time = time.localtime()
 seconds_left = 59 - current_time.tm_sec
 minutes_left = 59 - current_time.tm_min
 hours_left = 23 - current_time.tm_hour
-total_seconds = seconds + minutes * 60 + hours * 3600 + days * 86400
-
+days_left = 0

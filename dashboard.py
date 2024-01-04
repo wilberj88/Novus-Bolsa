@@ -13,7 +13,7 @@ if "symbols_list" not in st.session_state:
     
 st.set_page_config(
     layout = 'wide',
-    page_title = 'Crypto Dashboard'
+    page_title = 'Mis Finanzas 2024'
 )
 
 st.markdown(
@@ -28,17 +28,11 @@ st.markdown(
 with open('style.css') as f:
     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
 
-api_key = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbHVlIjoiNjU4MGJkMDkxNDBjZmQ3MjNkMTQyNDFhIiwiaWF0IjoxNzA0MjQ3MzU0LCJleHAiOjMzMjA4NzExMzU0fQ.M2HQZCbxV3-lGmg8Hh6lKFfWVs53DMP88hbSLqKM17o'
-url = f'https://api.taapi.io/candles?secret={api_key}&exchange=binance&symbol=BTC/USDT&interval=1d&period=365'
-hist_json = requests.get(url).json()
-#hist_df = pd.DataFrame(hist_json).drop('timestampHuman', axis = 1).rename(columns = {'timestamp':'time'})
-#hist_df.time = pd.to_datetime(hist_df.time, unit = 's')
-#hist_df.tail()
 
 title_col, emp_col, btc_col, eth_col, xmr_col, sol_col, xrp_col = st.columns([1,0.2,1,1,1,1,1])
 
 with title_col:
-    st.markdown('<p class="dashboard_title">Crypto<br>Dashboard</p>', unsafe_allow_html = True)
+    st.markdown('<p class="dashboard_title">Mis Finanzas 2024<br>Dashboard</p>', unsafe_allow_html = True)
 
 with btc_col:
     with st.container(border=True):

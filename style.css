@@ -45,8 +45,8 @@ html, body, [class*="css"] {
     font-family: 'Space Grotesk';
     font-weight: 500;
     text-align: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 1px;
+    padding-bottom: 1px;
 }
 
 .price_details {

@@ -19,7 +19,7 @@ else:
     per = sec/100
     for i in range(100):
         bar.progress((i+1))
-        ts.sleep(per)  
+        time.sleep(per)  
 
 def run_progress_bar(seconds, minutes, hours, days):
     total_seconds = seconds + minutes * 60 + hours * 3600 + days * 86400

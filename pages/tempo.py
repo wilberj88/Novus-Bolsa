@@ -11,7 +11,7 @@ def converter(value):
     return t_s
 
 val = st.time_input("Set Timer", value=time(0,0,0))
-if str(val) == ""00:00:00":
+if str(val) == "00:00:00":
     st.write("Please set a timer")
 else:
     bar = st.progress(0)

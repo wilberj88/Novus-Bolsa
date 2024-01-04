@@ -35,7 +35,7 @@ def run_progress_bar(seconds, minutes, hours, days):
 
 st.title("Barra de Progreso con Streamlit")
 
-current_time = time.localtime()
+current_time = ts.localtime()
 seconds_left = 59 - current_time.tm_sec
 minutes_left = 59 - current_time.tm_min
 hours_left = 23 - current_time.tm_hour

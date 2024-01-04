@@ -3,6 +3,4 @@ lightweight_charts
 requests
 pandas
 streamlit_echarts
-time
-datetime
 plotly

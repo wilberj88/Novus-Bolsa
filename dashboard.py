@@ -103,7 +103,7 @@ with params_col:
 
             with chart_col:
 
-                with st.container(border=True):        
+                with st.container(border=True):
                     def render_basic_radar():
                         option = {
                                 "title": {"text": "Costos estimados por tipos de Riesgos Climáticos"},

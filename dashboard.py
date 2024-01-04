@@ -73,11 +73,8 @@ with params_col:
         listado_edad_retiro = ['50 años','55 años','60 años','65 años','70 años']
         retiro = st.selectbox('¿A qué edad deseas pensionarte?', listado_edad_retiro, key = 'retiro')
         
-        interval_col, period_col = st.columns(2)
-        with interval_col:
-            estilo_de_vida_retiro = st.selectbox('Estilo de vida', ['Popular', 'Clase Media', 'Clase Media Alta', 'Clase Alta'], key = 'interval_selectbox')
-        with period_col:
-            ahorro = st.number_input('Meta Ahorros USD millones', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
+        estilo_de_vida_retiro = st.selectbox('Estilo de vida', ['Popular', 'Clase Media', 'Clase Media Alta', 'Clase Alta'], key = 'interval_selectbox')
+        ahorro = st.number_input('Meta Ahorros USD millones', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
         st.divider()
         update_chart = st.form_submit_button('Update chart')
         

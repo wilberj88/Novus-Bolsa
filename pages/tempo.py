@@ -20,6 +20,7 @@ else:
     per = sec/100
     for i in range(100):
         bar.progress((i+1))
+        st.write(str(i)+" %")
         ts.sleep(per)  
 
 def run_progress_bar(seconds, minutes, hours, days):

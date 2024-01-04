@@ -26,24 +26,24 @@ else:
 
 
 st.title('1 second Timer')
-hora = "00:01:00"
-sec = converter(str(hora))
-bar = st.progress(0)
+segundo = "00:01:00"
+sec = converter(str(segundo))
+bar_segundo = st.progress(0)
 per = sec/100
 progress_status = st.empty()
 for i in range(100):
-    bar.progress((i+1))
+    bar_segundo.progress((i+1))
     progress_status.write(str(i+1)+" %")
     ts.sleep(per) 
 
 st.title('1 minute Timer')
-hora = "01:00:00"
-sec = converter(str(hora))
-bar = st.progress(0)
+minuto = "01:00:00"
+sec = converter(str(minuto))
+bar_minuto = st.progress(0)
 per = sec/100
 progress_status = st.empty()
 for i in range(100):
-    bar.progress((i+1))
+    bar_minuto.progress((i+1))
     progress_status.write(str(i+1)+" %")
     ts.sleep(per)  
 
@@ -51,11 +51,11 @@ for i in range(100):
 st.title('1 hour Timer')
 hora = "59:59:99"
 sec = converter(str(hora))
-bar = st.progress(0)
+bar_hora = st.progress(0)
 per = sec/100
 progress_status = st.empty()
 for i in range(100):
-    bar.progress((i+1))
+    bar_hora.progress((i+1))
     progress_status.write(str(i+1)+" %")
     ts.sleep(per)  
 

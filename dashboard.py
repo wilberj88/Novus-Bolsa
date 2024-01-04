@@ -6,6 +6,7 @@ from lightweight_charts.widgets import StreamlitChart
 import random
 import pandas as pd
 import time
+from datetime import time
 
 if "symbols_list" not in st.session_state:
     st.session_state.symbols_list = None
@@ -103,10 +104,18 @@ with params_col:
             with chart_col:
 
                 with st.container(border=True):        
+                    current_time = time.localtime()
+                    seconds_left = 59 - current_time.tm_sec
+                    minutes_left = 59 - current_time.tm_min
+                    hours_left = 23 - current_time.tm_hour
+                    total_seconds = seconds + minutes * 60 + hours * 3600 + days * 86400
+
                     bar = st.progress(0)
-                    for i in range(10):
+                    for i in range(total_seconds):
                         bar.progress((i+1)*10)
                         time.sleep(1)             
+
+                    
                     def render_basic_radar():
                         option = {
                                 "title": {"text": "Costos estimados por tipos de Riesgos Climáticos"},

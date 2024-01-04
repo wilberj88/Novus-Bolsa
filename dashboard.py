@@ -75,13 +75,11 @@ with params_col:
         
         interval_col, period_col = st.columns(2)
         with interval_col:
-            interval = st.selectbox('Interval', ['1m', '5m', '15m', '30m', '1h', '2h', '4h', '12h', '1d'], key = 'interval_selectbox')
+            estilo_de_vida_retiro = st.selectbox('Estilo de vida', ['Popular', 'Clase Media', 'Clase Media Alta', 'Clase Alta'], key = 'interval_selectbox')
         with period_col:
-            period = st.number_input('Period', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
+            ahorro = st.number_input('Meta Ahorros USD millones', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
         st.divider()
-        st.markdown('')
         update_chart = st.form_submit_button('Update chart')
-        st.markdown('')
         
         if update_chart:
            

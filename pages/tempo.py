@@ -14,10 +14,12 @@ val = st.time_input("Set Timer", value=time(0,0,0))
 if str(val) == "00:00:00":
     st.write("Please set a timer")
 else:
+    sec = converter(str(val))
     bar = st.progress(0)
-    for i in range(10):
-        bar.progress((i+1)*10)
-        time.sleep(1)  
+    per = sec/100
+    for i in range(100):
+        bar.progress((i+1))
+        ts.sleep(per)  
 
 def run_progress_bar(seconds, minutes, hours, days):
     total_seconds = seconds + minutes * 60 + hours * 3600 + days * 86400

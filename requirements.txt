@@ -5,3 +5,4 @@ pandas
 streamlit_echarts
 time
 datetime
+plotly

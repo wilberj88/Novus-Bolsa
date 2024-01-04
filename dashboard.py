@@ -65,7 +65,7 @@ with params_col:
     
     with st.form(key = 'params_form'):
         
-        st.markdown(f'<p class="params_text">CHART DATA PARAMETERS', unsafe_allow_html = True)
+        st.markdown(f'<p class="params_text">PARÁMETROS', unsafe_allow_html = True)
         
         st.divider()
         
@@ -87,7 +87,7 @@ with params_col:
             interval = st.selectbox('Interval', ['1m', '5m', '15m', '30m', '1h', '2h', '4h', '12h', '1d'], key = 'interval_selectbox')
         with period_col:
             period = st.number_input('Period', min_value = 10, max_value = 500, value = 365, step = 1, key = 'period_no_input')
-        
+        st.divider()
         st.markdown('')
         update_chart = st.form_submit_button('Update chart')
         st.markdown('')

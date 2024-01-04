@@ -56,7 +56,7 @@ with sol_col:
 with xrp_col:
     with st.container(border=True):
         #xrp_price = requests.get(f'https://api.taapi.io/price?secret={api_key}&exchange=binance&symbol=XRP/USDT&interval=1m').json()['value']
-        st.markdown(f'<p class="xrp_text">Entretenimiento<br></p><p class="price_details">0.5449</p>', unsafe_allow_html = True)
+        st.markdown(f'<p class="xrp_text">Deudas<br></p><p class="price_details">0.5449</p>', unsafe_allow_html = True)
 
 
 params_col, chart_col, data_col = st.columns([0.7,1.6,1.1])

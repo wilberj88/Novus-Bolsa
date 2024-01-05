@@ -164,7 +164,7 @@ with params_col:
                             help="The sales volume in USD",
                             format="$%f",
                             min_value=0,
-                            max_value=1000,
+                            max_value=5000,
                         ),
                     },
                     hide_index=True,

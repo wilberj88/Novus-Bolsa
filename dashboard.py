@@ -143,7 +143,7 @@ with params_col:
                             [80, 20, 80, 35, 40, 100],
                             [10, 20, 80, 80, 70, 0],
                         ],
-                        "Performance": [[random.randint(0, 5000) for _ in range(30)] for _ in range(3)],
+                        "Performance": [200, 550, 1000],
                     }
                 )                
                 st.dataframe(
@@ -164,7 +164,7 @@ with params_col:
                             help="The sales volume in USD",
                             format="$%f",
                             min_value=0,
-                            max_value=5000,
+                            max_value=1000,
                         ),
                     },
                     hide_index=True,

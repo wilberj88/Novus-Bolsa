@@ -152,7 +152,7 @@ with params_col:
                         "name": "Tech Required",
                         "apps": st.column_config.ImageColumn(
                             "Preview Image", help="Streamlit app preview screenshots"
-                        )
+                        ),
                         "sales": st.column_config.BarChartColumn(
                             "Sales (last 6 months)",
                             help="The sales volume in the last 6 months",

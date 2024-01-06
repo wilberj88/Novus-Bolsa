@@ -16,9 +16,10 @@ color = {1: '#FF0000', 3: '#000FFF'}
 #
 # Show
 a = d3.movingbubbles(df, color=color, size=size)
+b = d3.show(title='Movingbubbles with adjusted configurations')
 
 html(a)
-                 
+html(b)
 
 with st.spinner('Wait for it...'):
     time.sleep(5)

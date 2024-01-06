@@ -4,24 +4,10 @@ import pandas as pd
 from datetime import time
 from streamlit_lottie import st_lottie
 from streamlit.components.v1 import html
-from d3blocks import D3Blocks
 
-d3 = D3Blocks()
-df = d3.import_example('random_time', n=1000, c=100, date_start="1-1-2000 00:10:05", date_stop="1-1-2000 23:59:59")
-#
-# Specify the colors and node sizes for the specific sample_id
-size = {1: 20, 3: 40}
-color = {1: '#FF0000', 3: '#000FFF'}
-#
-# Show
-a = d3.movingbubbles(df, color=color, size=size)
-b = d3.show(title='Movingbubbles with adjusted configurations')
-
-html(a)
-html(b)
 
 with st.spinner('Wait for it...'):
-    time.sleep(5)
+    ts.sleep(5)
 st.success('Done!')
 
 my_html = """

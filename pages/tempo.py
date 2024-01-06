@@ -7,19 +7,13 @@ from streamlit_lottie import st_lottie
 
 
 st.title('General Timer')
-with st.empty():
-    for seconds in range(60):
-        st.write(f"⏳ {seconds} seconds have passed")
-        time.sleep(1)
-    st.write("✔️ 1 minute over!")
-
-
 def converter(value):
     m, s, mm = value.split(":")
     t_s = int(m)*60+int(s)+int(mm)/1000
     return t_s
 
 val = st.time_input("Set Timer", value=time(0,0,0))
+
 if str(val) == "00:00:00":
     st.write("Please set a timer")
 else:

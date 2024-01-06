@@ -2,7 +2,6 @@ import streamlit as st
 import time as ts
 import pandas as pd
 from datetime import time
-import time
 from streamlit_lottie import st_lottie
 from streamlit.components.v1 import html
 from d3blocks import D3Blocks

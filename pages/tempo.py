@@ -6,8 +6,6 @@ from d3blocks import D3Blocks
 import time
 from streamlit_lottie import st_lottie
 
-with st_lottie("https://assets5.lottiefiles.com/packages/lf20_V9t630.json"):
-    time.sleep(5)
 
 
 # Initialize
@@ -21,8 +19,9 @@ size = {1: 20, 3: 40}
 color = {1: '#FF0000', 3: '#000FFF'}
 #
 # Show
-d3.movingbubbles(df, color=color, size=size)
+a = d3.movingbubbles(df, color=color, size=size)
 
+st.write(a)
 
 st.title('General Timer')
 

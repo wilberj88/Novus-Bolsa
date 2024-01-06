@@ -14,9 +14,9 @@ df = d3.import_example('random_time', n=10000, c=300, date_start="1-1-2000 00:10
 
 
 # Plot
-d3.movingbubbles(df, speed={"slow": 1000, "medium": 200, "fast": 10}, filepath='movingbubbles.html')
+a = d3.movingbubbles(df, speed={"slow": 1000, "medium": 200, "fast": 10}, filepath='movingbubbles.html')
 
-
+st.write(a)
 
 
 st.title('General Timer')

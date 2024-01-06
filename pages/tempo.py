@@ -2,28 +2,17 @@ import streamlit as st
 import time as ts
 import pandas as pd
 from datetime import time
-from d3blocks import D3Blocks
 import time
 from streamlit_lottie import st_lottie
 
 
-
-# Initialize
-d3 = D3Blocks(chart='movingbubbles')
-#
-# Import example
-df = d3.import_example('random_time', n=1000, c=100, date_start="1-1-2000 00:10:05", date_stop="1-1-2000 23:59:59")
-#
-# Specify the colors and node sizes for the specific sample_id
-size = {1: 20, 3: 40}
-color = {1: '#FF0000', 3: '#000FFF'}
-#
-# Show
-a = d3.movingbubbles(df, color=color, size=size)
-
-st.write(a)
-
 st.title('General Timer')
+with st.empty():
+    for seconds in range(60):
+        st.write(f"⏳ {seconds} seconds have passed")
+        time.sleep(1)
+    st.write("✔️ 1 minute over!")
+
 
 def converter(value):
     m, s, mm = value.split(":")

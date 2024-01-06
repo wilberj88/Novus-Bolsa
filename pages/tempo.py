@@ -6,6 +6,10 @@ import time
 from streamlit_lottie import st_lottie
 from streamlit.components.v1 import html
 
+with st.spinner('Wait for it...'):
+    time.sleep(5)
+st.success('Done!')
+
 my_html = """
 <script>
 function startTimer(duration, display) {

@@ -3,20 +3,25 @@ import time as ts
 import pandas as pd
 from datetime import time
 from d3blocks import D3Blocks
+import time
+from streamlit_lottie import st_lottie
+
+with st_lottie("https://assets5.lottiefiles.com/packages/lf20_V9t630.json"):
+    time.sleep(5)
 
 
 # Initialize
-d3 = D3Blocks()
-
-
-# Load example data
-df = d3.import_example('random_time', n=10000, c=300, date_start="1-1-2000 00:10:05", date_stop="1-1-2000 23:59:59")
-
-
-# Plot
-a = d3.movingbubbles(df, speed={"slow": 1000, "medium": 200, "fast": 10}, filepath='movingbubbles.html')
-
-st.DataFrame(a)
+d3 = D3Blocks(chart='movingbubbles')
+#
+# Import example
+df = d3.import_example('random_time', n=1000, c=100, date_start="1-1-2000 00:10:05", date_stop="1-1-2000 23:59:59")
+#
+# Specify the colors and node sizes for the specific sample_id
+size = {1: 20, 3: 40}
+color = {1: '#FF0000', 3: '#000FFF'}
+#
+# Show
+d3.movingbubbles(df, color=color, size=size)
 
 
 st.title('General Timer')

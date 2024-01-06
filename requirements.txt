@@ -4,3 +4,4 @@ requests
 pandas
 streamlit_echarts
 plotly
+d3blocks

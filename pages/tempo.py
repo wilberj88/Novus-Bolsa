@@ -12,16 +12,18 @@ currentYear = date.today().year
 currentMonth = date.today().month
 currentMonthName = calendar.month_name[currentMonth]
 
-try:
-    monthrange = calendar.monthrange(currentYear, currentMonth)[1]
-    percentOfTheMonth = (today / monthrange) * 100
-    percentOfTheMonth = '{:,.2f}'.format(percentOfTheMonth)
-    percentOfTheYear = (percentOfTheMonth)/12 
-except:
-    st.write("An error happened. Could not calculate the % of the month.")
-else:
-    st.write(str(percentOfTheMonth) + ' % of ' + currentMonthName + ' is completed.' + ' (As of ' + str(date.today()) + '.)')
-    st.write(str(percentOfTheYear) + ' % of ' + currentYear + ' is completed.' + ' (As of ' + str(date.today()) + '.)')
+
+monthrange = calendar.monthrange(currentYear, currentMonth)[1]
+percentOfTheMonth = (today / monthrange) * 100
+percentOfTheMonth = '{:,.2f}'.format(percentOfTheMonth)
+percentOfTheYear = ((percentOfTheMonth)/12)*100
+percentOfTheYear = '{:,.2f}'.format(percentOfTheYear)
+
+st.write(str(percentOfTheMonth) + ' % of ' + currentMonthName + ' is completed.' + ' (As of ' + str(date.today()) + '.)')
+
+st.write(str(percentOfTheYear) + ' % of ' + currentYear + ' is completed.' + ' (As of ' + str(date.today()) + '.)')
+
+
 
 
 with st.spinner('Wait for it...'):

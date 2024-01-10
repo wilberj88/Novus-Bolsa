@@ -16,7 +16,7 @@ currentMonthName = calendar.month_name[currentMonth]
 monthrange = calendar.monthrange(currentYear, currentMonth)[1]
 percentOfTheMonth = (today / monthrange) * 100
 percentOfTheMonth = '{:,.2f}'.format(percentOfTheMonth)
-percentOfTheYear = ((percentOfTheMonth)/12)*100
+percentOfTheYear = (int(percentOfTheMonth)/12)*100
 percentOfTheYear = '{:,.2f}'.format(percentOfTheYear)
 
 st.write(str(percentOfTheMonth) + ' % of ' + currentMonthName + ' is completed.' + ' (As of ' + str(date.today()) + '.)')

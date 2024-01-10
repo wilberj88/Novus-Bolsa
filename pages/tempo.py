@@ -4,7 +4,22 @@ import pandas as pd
 from datetime import time
 from streamlit_lottie import st_lottie
 from streamlit.components.v1 import html
+import calendar
+from datetime import date
 
+today = date.today().day
+currentYear = date.today().year
+currentMonth = date.today().month
+currentMonthName = calendar.month_name[currentMonth]
+
+try:
+    monthrange = calendar.monthrange(currentYear, currentMonth)[1]
+    percentOfTheMonth = (today / monthrange) * 100
+    percentOfTheMonth = '{:,.2f}'.format(percentOfTheMonth)
+except:
+    st.write("An error happened. Could not calculate the % of the month.")
+else:
+    st.write(str(percentOfTheMonth) + ' % of ' + currentMonthName + ' is completed.' + ' (As of ' + str(date.today()) + '.)')
 
 with st.spinner('Wait for it...'):
     ts.sleep(5)

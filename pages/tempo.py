@@ -6,6 +6,32 @@ from streamlit_lottie import st_lottie
 from streamlit.components.v1 import html
 import calendar
 from datetime import date
+from datetime import datetime
+
+
+def porcentaje_del_anio_transcurrido():
+    # Obtener la fecha actual
+    fecha_actual = datetime.now()
+
+    # Obtener el primer día del año actual
+    primer_dia_del_anio = datetime(fecha_actual.year, 1, 1)
+
+    # Calcular el número de días transcurridos
+    dias_transcurridos = (fecha_actual - primer_dia_del_anio).days
+
+    # Calcular el número total de días en el año
+    total_dias_en_el_anio = (datetime(fecha_actual.year + 1, 1, 1) - primer_dia_del_anio).days
+
+    # Calcular el porcentaje del año transcurrido
+    porcentaje_transcurrido = (dias_transcurridos / total_dias_en_el_anio) * 100
+
+    return fecha_actual, porcentaje_transcurrido
+
+# Ejemplo de uso
+fecha_actual, porcentaje_transcurrido = porcentaje_del_anio_transcurrido()
+st.write("Fecha actual:", fecha_actual)
+st.write("Porcentaje del año transcurrido:", porcentaje_transcurrido)
+
 
 today = date.today().day
 currentYear = date.today().year

@@ -9,6 +9,35 @@ from datetime import date
 from datetime import datetime
 
 
+def obtener_calendario_mes_actual():
+    fecha_actual = datetime.now()
+    año_actual = fecha_actual.year
+    mes_actual = fecha_actual.month
+    cal = calendar.monthcalendar(año_actual, mes_actual)
+    return cal, año_actual, mes_actual
+
+def imprimir_calendario_diferenciado():
+    cal, año_actual, mes_actual = obtener_calendario_mes_actual()
+
+    # Imprimir el encabezado del calendario
+    st.write(f"{calendar.month_name[mes_actual]} {año_actual}")
+    st.write("Lu Ma Mi Ju Vi Sa Do")
+
+    for semana in cal:
+        for día in semana:
+            # Marcar los días pasados y futuros con diferentes colores
+            if día == 0:
+                st.write("   ", end=" ")
+            elif día < datetime.now().day:
+                st.write(f"<span style='color: grey;'>{día}</span>", unsafe_allow_html=True, end=" ")
+            else:
+                st.write(f"<span style='font-weight: bold;'>{día}</span>", unsafe_allow_html=True, end=" ")
+
+        st.write()
+
+st.title("Calendario del Mes Actual con Streamlit")
+imprimir_calendario_diferenciado()
+
 def porcentaje_del_anio_transcurrido():
     # Obtener la fecha actual
     fecha_actual = datetime.now()

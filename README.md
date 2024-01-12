@@ -17,6 +17,8 @@ https://medium.com/@sugath.mudali/creating-a-stock-dashboard-with-streamlit-4410
 
 Stock Trading:
 https://medium.com/@samuelerickson977/creating-an-automated-stock-trading-system-using-reinforcement-learning-e1dbe1a305fd
+For retirament:
+https://khorkeanteng.medium.com/road-to-1-million-with-epf-8e0fba332ab0
 
 Build a ChatGPT Trading Bot With Real Time News using JavaScript
 https://morioh.com/p/7bfa4ed83037?f=60c59d87cb33627fbcc0a0f3&fbclid=IwAR0uewyMIf4FRgmvkVjS7rsDpc0cEypapacNJpUVei_twHfbQlMpXKnQMSU

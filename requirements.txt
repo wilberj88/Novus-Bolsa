@@ -8,3 +8,4 @@ d3blocks
 streamlit_lottie
 streamlit_option_menu
 streamlit_vertical_slider
+streamlit_toggle

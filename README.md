@@ -16,6 +16,7 @@ https://medium.com/@sugath.mudali/a-simple-stock-picking-strategy-with-6-key-fin
 https://medium.com/@sugath.mudali/creating-a-stock-dashboard-with-streamlit-441039bdf7e0
 
 Stock Trading:
+https://levelup.gitconnected.com/how-to-use-deep-learning-for-real-time-trading-decisions-4a80d94a7851
 https://medium.com/@samuelerickson977/creating-an-automated-stock-trading-system-using-reinforcement-learning-e1dbe1a305fd
 For retirament:
 https://khorkeanteng.medium.com/road-to-1-million-with-epf-8e0fba332ab0

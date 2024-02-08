@@ -4,6 +4,9 @@ IA para Trading de Acciones, bonos, derivados, cripto, inmobiliarias e inversion
 API Financial Modeling Prep:
 https://medium.datadriveninvestor.com/develop-a-simple-financial-dashboard-with-streamlit-and-financial-modeling-prep-bd28af828fda
 
+Stock market sentiment analysis:
+https://levelup.gitconnected.com/stock-market-sentiment-prediction-with-openai-and-python-ea2e2261fcbf
+
 Cripto Real Time Dashboard:
 https://levelup.gitconnected.com/creating-a-crypto-dashboard-with-custom-css-in-streamlit-53c5b85ec237
 
